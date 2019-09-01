@@ -1,0 +1,40 @@
+<app-navbar>
+
+</app-navbar>
+
+
+<div class=" contenedor card border-info mb-3">
+    <h5>
+        <div class="card-header card-title text-info">Likes de comercios</div>
+    </h5>
+
+    <div class="card-body text-info">
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Comercio</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Likes</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let comercioL of comercios">
+                    <td>{{comercioL.id}}</td>
+                    <td>{{comercioL.nombre}}</td>
+                    <td>{{comercioL.createAt}}</td>
+                    <td>{{comercioL.likes}}</td>
+
+
+                </tr>
+
+            </tbody>
+        </table>
+        <app-paginator *ngIf="paginador" [paginador]="paginador"></app-paginator>
+
+    </div>
+</div>
